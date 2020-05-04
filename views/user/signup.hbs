@@ -1,0 +1,40 @@
+<div class="signup-container-wrapper">
+    <div class="from-outer-wrapper">
+        <div class="form-heading">
+            <h1> Create Account </h1>
+        </div>
+        <form id="form-create-user" action="/user/signup" method="post">
+            {{#if message}}
+                <div class="alert-danger message-container">
+                    {{message}}
+                </div>
+                <br>
+            {{/if}}
+            <div class="form-group">
+                <label for="firstname">First Name*</label>
+                <input type="text" id="firstname" name="firstname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name*</label>
+                <input type="text" id="lastname" name="lastname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="username">User Name*</label>
+                <input type="text" id="username" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <div class="btn-cta-wrapper signup-btn-wrapper">
+                <button type="submit" class="btn btn-primary btn-style signup-action-btn">
+                    Sign Up
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

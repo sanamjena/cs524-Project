@@ -1,0 +1,103 @@
+<div class="heading-container">
+    <h1>
+        My Profile
+    </h1>
+</div>
+<div class="wishlist-label-div"> Account Info</div>
+<div class="account-info-wrapper">
+    <div class="from-outer-wrapper">
+        <div class="form-group">
+            <label for="firstname">First Name</label>
+            <span class="edit-section"><i class="fas fa-pencil-alt"></i></span>
+            <input type="text" id="firstname" name="firstname" disabled class="form-control" value="{{user.firstname}}">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <span class="edit-section"><i class="fas fa-pencil-alt"></i></span>
+            <input type="text" id="lastname" name="lastname" disabled class="form-control" value="{{user.lastname}}">
+        </div>
+        <div class="form-group">
+            <label for="username">User Name</label>
+            <span class="edit-section"><i class="fas fa-pencil-alt"></i></span>
+            <input type="text" id="username" name="username" disabled class="form-control" value="{{user.username}}">
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <span class="edit-section"><i class="fas fa-pencil-alt"></i></span>
+            <input type="email" id="email" name="email" disabled class="form-control" value="{{user.email}}">
+        </div>
+    </div>
+    <div class="btn-account-div">
+        <button class="btn btn-primary update-profile">Save Changes</button>
+    </div>
+</div>
+
+<div class="wishlist-label-div"> Your Wishlist</div>
+{{#if existwishlist}}
+    <div class="row wishlist-row-wrap">
+        {{#each wishlist}}
+            <div class="col-md-6 col-sm-6 col-md-6 col-xs-12 wishlist-wrapper">
+                <span class="delete-item-wishlist" data-id="{{this._id}}" data-restaurant="{{this.name}}" ><i class="far fa-trash-alt"></i></span>
+                <div class="wishlist-div-outer">
+                    <div class="wishlist-restaurant-img">
+                        <img src="{{this.logoimg}}">
+                    </div>
+                    <div class="restaurant-name">
+                        {{this.name}}
+                    </div>
+                </div>
+            </div>
+            
+        {{/each}}
+    </div>
+{{else}}
+    <div class="no-wishlist-section">
+        <div class="no-wishlist-exists">
+            Unfortunately you haven't created your wishlist :(
+        </div>
+        <div class="browse-schools-cta">
+            <button class="btn btn-primary" onclick="window.location.href='/'">Browse</button>
+        </div>
+    </div>
+    
+{{/if}}
+
+
+{{!-- <div class="from-outer-wrapper">
+        <div class="form-heading">
+            <h2> User Info </h2>
+        </div>
+        <form id="form-create-user" action="/user/signup" method="post">
+            {{#if message}}
+                <div class="alert-danger message-container">
+                    {{message}}
+                </div>
+                <br>
+            {{/if}}
+            <div class="form-group">
+                <label for="firstname">First Name*</label>
+                <input type="text" id="firstname" name="firstname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name*</label>
+                <input type="text" id="lastname" name="lastname" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="username">User Name*</label>
+                <input type="text" id="username" name="username" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail*</label>
+                <input type="email" id="email" name="email" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" class="form-control">
+            </div>
+            <div class="btn-cta-wrapper signup-btn-wrapper">
+                <button type="submit" class="btn btn-primary btn-style signup-action-btn">
+                    Apply Change
+                </button>
+            </div>
+        </form>
+    </div> --}}

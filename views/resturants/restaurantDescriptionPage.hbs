@@ -1,0 +1,49 @@
+<div class="heading-container">
+    <h1>
+        {{restaurant.name}}
+    </h1>
+</div>
+<div class="body-container-class">
+    <div class="row description-page-wrapper">
+        <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6 restaurant-img-outer">
+            <img class="resize-image" src="{{restaurant.logoimg}}">
+        </div>
+        <div class="col-xs-12 col-md-6 col-sm-6 col-lg-6">
+            <div class="wishlist-add-wrapper">
+                <span>
+                    <i class="fas fa-heart place-options {{wishlist}}" data-action="wishlist" data-id="{{restaurant._id}}" ></i>
+                </span>
+                <span class="right-mobile">
+                    <i class="fas fa-thumbs-up place-options {{vote}}" data-action="vote" data-id="{{restaurant._id}}"></i>
+                </span>
+            </div>
+            <div class="long-description">
+                {{restaurant.description}}
+            </div>
+            <input type="hidden" value="{{restaurant._id}}" class="retaurant_id">
+            <br>
+            <div class="user-comments">
+                <p class="comment-header">Comments:</p>
+                {{#each comments}}
+                <div class="user-comment">
+                    <div class="comment-text">"{{this.commenttext}}"</div>
+                    <div class="username-text">- {{this.username}}</div>
+                </div>
+                <br> 
+                {{/each}}
+            </div>
+            {{#if enablecomment}}
+                <div class="user-review-section">
+                    <div class="comment-div-wrapper">
+                        {{!-- <label for="comment" class="comment-label">Comments:</label> --}}
+                        <textarea class="form-control rounded-0 comment-area" placeholder="Enter a comment"  rows="3"></textarea>
+                    </div>
+                    <br>
+                    <div class="comment-submit-wrapper-div">
+                        <button type="button" class="btn btn-primary comment-submit">Submit</button>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,268 @@
+html,
+body {
+    height: 100%;
+}
+
+div,
+p,
+span {
+    font-size: 16px;
+}
+
+h1 {
+    font-variant: small-caps;
+}
+
+.heading-container {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.from-outer-wrapper {
+    max-width: 600px;
+    margin: 0px auto;
+}
+
+.btn-cta-wrapper {
+    text-align: center;
+}
+
+.form-heading {
+    padding-top: 10px;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+.btn-style {
+    font-variant: small-caps;
+    font-size: 18px;
+}
+
+.message-container {
+    padding: 12px;
+    border-radius: 2px;
+}
+
+.validate-input {
+    border: 1px solid #b50b21;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .account-dropdown-menu,
+    .logo-desk {
+        display: none;
+    }
+
+    .restaurant-list-wrapper {
+        margin: -5px;
+    }
+
+    .right-mobile {
+        float: right;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .logo-mobile {
+        display: none;
+    }
+
+    .wishlist-add-wrapper span {
+        margin: 5px;
+    }
+}
+
+.logo-mobile img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.user-name {
+    text-transform: capitalize;
+}
+
+.school-img-container img {
+    max-width: 100%;
+    max-height: 350px;
+}
+
+.school-info-wrapper {
+    text-align: center;
+}
+
+.school-description {
+    padding: 10px 0px;
+    font-size: 18px;
+}
+
+.school-title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.restaurant-list-wrapper {
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+}
+
+.restaurant-img-div {
+    padding: 5px;
+}
+
+.restaurant-img-div img {
+    max-width: 100%;
+}
+
+.restaurant-name {
+    font-variant: small-caps;
+    font-size: 21px;
+}
+
+.restaurant-address-span {
+    font-variant: small-caps;
+}
+
+.restaurant-addres-text,
+.restaurant-description {
+    color: rgb(108, 115, 124);
+}
+
+.comment-area {
+    border-radius: 3px !important;
+}
+
+.comment-text {
+    border-radius: 12px;
+
+    font-style: italic;
+
+}
+
+.comment-header {
+
+    font-weight: bold;
+}
+
+.wishlist-add-wrapper {
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.wishlist-add-wrapper i {
+    font-size: 22px;
+    color: #d3d3d3;
+    cursor: pointer;
+    -webkit-transition: width 2s, height 2s;
+    /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 2s;
+}
+
+.wishlist-add-wrapper i:hover {
+    font-size: 24px;
+}
+
+.wishlist-add-wrapper i.added-to-wishlist {
+    color: #F08080 !important;
+}
+
+.wishlist-add-wrapper i.upvoted {
+    color: #90EE90 !important;
+}
+
+.username-text {
+    font-style: italic;
+    text-transform: capitalize;
+}
+
+.description-page-wrapper {
+    align-items: center;
+}
+
+.resize-image {
+    width: 350px;
+    height: 234px;
+}
+
+.restaurant-img-outer {
+    text-align: center;
+
+}
+
+.wishlist-wrapper {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.account-info-wrapper label {
+    font-variant: small-caps;
+}
+
+.wishlist-label-div {
+    text-align: center;
+    font-size: 22px;
+    font-variant: small-caps;
+    color: #585b5c;
+    padding: 10px 0px;
+}
+
+.wishlist-row-wrap {
+    max-width: 768px;
+    margin: 0px auto;
+}
+
+.delete-item-wishlist {
+    position: relative;
+    float: right;
+    right: 12px;
+    top: 25px;
+    cursor: pointer;
+}
+
+.delete-item-wishlist i:hover {
+    font-size: 15px;
+    color: #F08080;
+}
+
+.no-wishlist-exists {
+    text-align: center;
+    line-height: 22px;
+}
+
+.no-wishlist-section {
+    text-align: center;
+}
+
+.browse-schools-cta {
+    padding-top: 20px;
+}
+
+.footer-div {
+    /* position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%; */
+    background-color: #f8f9fa;
+}
+
+.account-info-wrapper .edit-section {
+    float: right;
+}
+
+.account-info-wrapper .edit-section i {
+    color: #585b5c;
+    cursor: pointer;
+}
+
+.btn-account-div {
+    display: none;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.wishlist-restaurant-img img {
+    width: 350px;
+    height: 234px;
+}

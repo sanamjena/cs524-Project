@@ -1,0 +1,45 @@
+<div class="signup-container-wrapper">
+    <div class="from-outer-wrapper">
+        <div class="form-heading">
+            <h1> Add A New Location </h1>
+        </div>
+        <form id="form-add-location" action="/admin/addlocation" method="post">
+            {{#if message}}
+            <div class="alert-danger message-container">
+                {{message}}
+            </div>
+            <br> {{/if}}
+            <div class="form-group">
+                <label for="name">Name of the Location*</label>
+                <input type="text" id="name" name="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="description">description*</label>
+                <input type="text" id="description" name="description" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="address">address*</label>
+                <input type="text" id="address" name="address" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="logoimg">Upload an image link*</label>
+                <input type="text" id="logoimg" name="logoimg" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="schoolid">Select School:*</label>
+                <select name="schoolid" class="form-control" id="schoolid">
+                    <option>Choose School</option>
+                    {{#each schools}}
+                    <option value="{{this._id}}">{{this.schoolname}}</option>
+                    {{/each}}
+                </select>
+            </div>
+
+            <div class="btn-cta-wrapper signup-btn-wrapper">
+                <button type="submit" class="btn btn-primary btn-style location-action-btn">
+                    Add Location
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

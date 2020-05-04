@@ -1,0 +1,36 @@
+<div class="heading-container">
+    <h1>
+        Restaurants List
+    </h1>
+</div>
+<div class="body-container-class">
+    <div class="school-title">
+        <h2>{{school.schoolname}}</h2>
+    </div>
+    {{#each restaurants}}
+        <div class="row restaurant-list-wrapper">
+            <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+                <div class="restaurant-img-div">
+                    <a href="/restaurant/{{this._id}}">
+                        <img src="{{this.logoimg}}" >
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8 col-sm-8 col-lg-8 col-xs-12">
+                <div class="restaurant-name">
+                    <a href="/restaurant/{{this._id}}">
+                        {{this.name}}
+                    </a>
+                </div>
+                <div class="address-wrapper">
+                    <span class="restaurant-address-span">Address: </span>
+                    <span class="restaurant-addres-text"> {{this.address}} </span>
+                </div>
+                <div class="restaurant-description">
+                    {{this.description}}
+                </div>
+            </div>
+        </div>
+        <br>
+    {{/each}}
+</div>
