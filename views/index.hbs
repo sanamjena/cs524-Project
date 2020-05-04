@@ -1,24 +1,24 @@
 <div class="home-index-container">
     <div class="heading-container">
         <h1>
-            Browse Schools
+            Browse Schools123
         </h1>
     </div>
     <div class="school-list-wrapper row">
         <div class="col-xs-12 col-md-6 col-lg-6 col-sm-6 school-info-wrapper">
             {{#each schools}}
-                <div class="school-img-container">
+            <div class="school-img-container">
+                <a href="/school/{{this._id}}">
+                    <img src="{{this.schoolimg}}">
+                </a>
+            </div>
+            <div class="school-description">
+                <div class="school-title">
                     <a href="/school/{{this._id}}">
-                        <img src="{{this.schoolimg}}">
+                        {{this.schoolname}}
                     </a>
                 </div>
-                <div class="school-description">
-                    <div class="school-title">
-                        <a href="/school/{{this._id}}">
-                            {{this.schoolname}}
-                        </a>
-                    </div>
-                </div>
+            </div>
             {{/each}}
         </div>
     </div>
